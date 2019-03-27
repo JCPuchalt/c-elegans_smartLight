@@ -45,6 +45,27 @@ install_userland(){
   ./buildme
 }
 
+install_essencials(){
+  sudo apt-get install build-essential cmake unzip pkg-config
+
+  sudo apt-get install libjpeg-dev libpng-dev libtiff-dev
+  sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
+  sudo apt-get install libxvidcore-dev libx264-dev
+
+  sudo apt-get install libgtk-3-dev
+
+  sudo apt-get install libcanberra-gtk*
+
+  sudo apt-get install libatlas-base-dev gfortran
+}
+
+install_python(){
+  sudo apt-get install python3-dev
+  # For installing OpenCV into python environment
+  #sudo apt install virtualenv
+  pip install numpy
+}
+
 enable_camera()
 {
   if grep "start_x=1" /boot/config.txt
@@ -109,30 +130,12 @@ install_Celegans_smartLight(){
 
 install_opencv(){
   cd
-  sudo apt-get install build-essential cmake unzip pkg-config
-
-  sudo apt-get install libjpeg-dev libpng-dev libtiff-dev
-  sudo apt-get install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
-  sudo apt-get install libxvidcore-dev libx264-dev
-
-  sudo apt-get install libgtk-3-dev
-
-  sudo apt-get install libcanberra-gtk*
-
-  sudo apt-get install libatlas-base-dev gfortran
-
-  sudo apt-get install python3-dev
-
   # For installing OpenCV into python environment
-  #sudo apt install virtualenv
   #mkdir python-environments
   #cd python-environments
   #virtualenv -p python3 env
   #source env/bin/activate
   #cd
-  # ---
-
-  pip install numpy
 
   log "Downloading OpenCV..."
   git clone https://github.com/opencv/opencv.git
@@ -302,11 +305,15 @@ main(){
   logRed "Do you want to install userland (camera driver)? yes or no."
   ask_for_userland_installation
 
-  logRed "Make sure there is enough free space (5GB). It is needed "
+  logRed "Make sure there is enough free space (7GB). It is needed "
   logRed "at least a 16GB memory card, for OpenCV 4 on Raspberry Pi 3."
   logRed "If there is not space enough, try to free."
   logRed "Do you want to free some space? yes or no"
   ask_for_free_space
+
+  logGreen "Installing essencials and python..."
+  install_essencials
+  install_python
 
   logGreen "Increasing swap..."
   change_swap "2048"
