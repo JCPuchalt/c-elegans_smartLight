@@ -26,7 +26,7 @@ add_executable(c-elegans c-elegans.cpp sources/visionSystem.cpp sources/CE_Funci
 
 
 target_link_libraries(c-elegans -lopencv_core -lopencv_imgproc -lopencv_calib3d -lopencv_video -lopencv_features2d -lopencv_ml -lopencv_highgui
-				-lopencv_objdetect -lopencv_flann -lopencv_photo -lopencv_stitching -lopencv_ts -lopencv_videostab -fopenmp
+				-lopencv_objdetect -lopencv_flann -lopencv_photo -lopencv_stitching -lopencv_videostab -fopenmp
 				-lwiringPi -lm -lwiringPiDev -lpthread 
 				libmmal_util.so libmmal_core.so libmmal_vc_client.so libvcos.so libbcm_host.so -IEGL GLESv2 EGL ncurses ${OpenCV_LIBS} -lrt )
 
