@@ -98,12 +98,12 @@ set_GPU_memory(){
   if grep "gpu_mem=" /boot/config.txt
   then
     local old=$(grep -i "gpu_mem=" /boot/config.txt)
-    local new="gpu_mem=1"
+    local new="gpu_mem=$1"
     echo "$old -> $new"
     sudo sed -i "s/"$old"/"$new"/g" /boot/config.txt
   else
-    echo "Camera led has been disabled"
-    sudo sh -c "echo \"gpu_mem=1\" >> /boot/config.txt"
+    echo "Set gpu_mem=$1"
+    sudo sh -c "echo \"gpu_mem=$1\" >> /boot/config.txt"
   fi
 }
 
