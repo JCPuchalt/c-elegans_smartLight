@@ -315,7 +315,7 @@ main(){
   logRed "Do you want to install userland (camera driver)? yes or no."
   ask_for_userland_installation
 
-  logRed "Make sure there is enough free space (7GB). It is needed "
+  logRed "Make sure there is enough free space (more than 8GB). It is needed "
   logRed "at least a 16GB memory card, for OpenCV 4 on Raspberry Pi 3."
   logRed "If there is not space enough, try to free."
   logRed "Do you want to free some space? yes or no"
