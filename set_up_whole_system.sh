@@ -68,12 +68,16 @@ install_python(){
 
 enable_camera()
 {
-  if grep "start_x=1" /boot/config.txt
+  if grep "start_x=" /boot/config.txt
   then
     echo "Camera is enabled"
+    local old=$(grep -i "start_x=" /boot/config.txt)
+    local new="start_x=1"
+    echo "$old -> $new"
+    sudo sed -i "s/"$old"/"$new"/g" /boot/config.txt
   else
     echo "Camera has been enabled"
-    sudo sed -i "s/start_x=0/start_x=1/g" /boot/config.txt
+    sudo sh -c "echo \"start_x=1\" >> /boot/config.txt"
   fi
 }
 
@@ -91,11 +95,16 @@ disable_camera_led(){
 }
 
 set_GPU_memory(){
-  local old=$(grep -i "gpu_mem=" /boot/config.txt)
-
-  local new="gpu_mem=$1"
-  echo "$old -> $new"
-  sudo sed -i "s/"$old"/"$new"/g" /boot/config.txt
+  if grep "gpu_mem=" /boot/config.txt
+  then
+    local old=$(grep -i "gpu_mem=" /boot/config.txt)
+    local new="gpu_mem=1"
+    echo "$old -> $new"
+    sudo sed -i "s/"$old"/"$new"/g" /boot/config.txt
+  else
+    echo "Camera led has been disabled"
+    sudo sh -c "echo \"gpu_mem=1\" >> /boot/config.txt"
+  fi
 }
 
 free_space(){
@@ -142,7 +151,8 @@ install_opencv(){
   #cd opencv
   #git checkout $cvVersion
   #cd ..
-
+  cd
+  
   log "Downloading OpenCV_contrib..."
   git clone https://github.com/opencv/opencv_contrib.git
   #cd opencv_contrib
