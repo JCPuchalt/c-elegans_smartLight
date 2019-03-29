@@ -38,14 +38,14 @@ the camera-display correspondences.
         ````
         
         
-## Software installation details of set_up_whole_system.sh. It will install:
-### Requirements
+## Software installation details of set_up_whole_system.sh. It will install and set:
 
 * Download and install OpenCV 3.0 and opencv_contrib
-* Download and install userland in [/home/pi/userland-master] 
+* Download and install userland in [/home/pi/userland] 
 (https://github.com/raspberrypi/userland)
 * Set GPU memory at 256MB
 * Temporarily increase the swap
+* Free some memory
 * Install libncurses5-dev libncursesw5-dev
 * Install git
 * Enable SSH
