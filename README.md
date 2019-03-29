@@ -55,17 +55,12 @@ the camera-display correspondences.
 * Enable camera
 * Disable camera led
 * Download and install c-elegans_smartLight program
-
-### Installation
-
-* Copy code in a folder [/home/pi/]
-
-* cd c-elegans_smartLight
-
-* cmake .
-
-* make
-
+    Copy code in a folder [/home/pi/]
+    ````
+    cd c-elegans_smartLight
+    cmake .
+    make
+    ````
 
 ### Run code
 ````
