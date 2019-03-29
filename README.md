@@ -2,10 +2,7 @@
 This code is developed for assessing:
 [1] "Active backlight for automating visual monitoring: an analysis of a lighting
 control technique for Caenorhabditis elegans cultured on standard Petri plates" PLOS ONE
-Copyright (c) 2018 A.Sánchez, J.Puchalt, P.Martorell and S.Genovés
-
-UPV and Biopolis license.
-
+Copyright (c) 2018 UPV and Biopolis. A.Sánchez, J.Puchalt, P.Martorell and S.Genovés
 
 
 ### Hardware description on [1]
@@ -45,7 +42,7 @@ the camera-display correspondences.
 ### Requirements
 
 * Download and install OpenCV 3.0 and opencv_contrib
-* Download and install userland-master in [/home/pi/userland-master] 
+* Download and install userland in [/home/pi/userland-master] 
 (https://github.com/raspberrypi/userland)
 * Set GPU memory at 256MB
 * Temporarily increase the swap
@@ -54,17 +51,17 @@ the camera-display correspondences.
 * Enable SSH
 * Enable camera
 * Disable camera led
-* Download and install c-elegans_smartLight program
-    Copy code in a folder [/home/pi/]
+* Download and install c-elegans_smartLight program. Copy code in a folder [/home/pi/]
     ````
     cd c-elegans_smartLight
     cmake .
     make
     ````
 
-### Run code
+## Run code on Raspberry Pi
+Connect from PC to Raspberry Pi through SSH (on Windows with PuTTY (https://www.ssh.com/ssh/putty/download) or Linux with terminal `ssh pi@Raspberry_IP_Adrees`). That terminal is connected to Raspberry, so type on that terminal:
 ````
-cd c-elegans_smartLight '\n'
+cd c-elegans_smartLight
 sudo ./c-elegans
 ````
 
