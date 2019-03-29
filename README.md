@@ -31,11 +31,12 @@ the camera-display correspondences.
     6. Connect to Ethernet.
     7. Connect power supply and follow the raspbian installation instructions indicated on display.
     8. Write down the Raspberry Pi IP address. To find it, on a terminal type: 
-        `<ifconfig>` 
+        `ifconfig` 
 * From Raspberry Pi open a Terminal. 
-    1. Download set_up_whole_system.sh file into [/home/pi].       
+    1. Download set_up_whole_system.sh file into (i.e.) [/home/pi].       
     2. Launch file set_up_whole_system.sh and follow instructions. On terminal, set file folder (for example: /home/pi/Downloads) 
         > cd /home/pi/Downloads
+        
         > sh ./set_up_whole_system.sh
         
         
@@ -47,9 +48,9 @@ the camera-display correspondences.
 * Install userland-master in [/home/pi/userland-master] 
 (https://github.com/raspberrypi/userland)
 
-* GPU memory 256MB
+* Set GPU memory 256MB
 
-* 
+* Install 
 
 ## Installation
 
