@@ -8,7 +8,7 @@ UPV and Biopolis license.
 
 
 
-## Hardware description on [1]
+### Hardware description on [1]
 Components:
 * Raspberry Pi 3
 * Pi NoIR Camera V1
@@ -21,7 +21,7 @@ The camera should be coplanar to the display focusing at the center of it at a d
 The camera and the display must be firmly grasped, since any minimum displacement will decalibrate 
 the camera-display correspondences.
 
-## Easy software installation
+### Easy software installation
 * Install raspbian on Raspberry Pi 3. 
     1. Download raspbian installer (NOOBS) from https://www.raspberrypi.org/downloads/noobs/
     2. Unzip the downloaded files
@@ -40,8 +40,8 @@ the camera-display correspondences.
         > sh ./set_up_whole_system.sh
         
         
-# Software installation details of set_up_whole_system.sh. It will install:
-## Requirements
+## Software installation details of set_up_whole_system.sh. It will install:
+### Requirements
 
 * OpenCV 3.0 and opencv_contrib
 
@@ -52,7 +52,7 @@ the camera-display correspondences.
 
 * Install 
 
-## Installation
+### Installation
 
 * Copy code in a folder [/home/pi/]
 
@@ -63,9 +63,10 @@ the camera-display correspondences.
 * make
 
 
-## Run code
+### Run code
 
-* sudo ./c-elegans
+> cd c-elegans_smartLight
+> sudo ./c-elegans
 
 
 ## Notes
