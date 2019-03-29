@@ -35,22 +35,26 @@ the camera-display correspondences.
 * From Raspberry Pi open a Terminal. 
     1. Download set_up_whole_system.sh file into (i.e.) [/home/pi].       
     2. Launch file set_up_whole_system.sh and follow instructions. On terminal, set file folder (for example: /home/pi/Downloads) 
-        > cd /home/pi/Downloads
-        
-        > sh ./set_up_whole_system.sh
+        ````
+        cd /home/pi/Downloads
+        sh ./set_up_whole_system.sh
+        ````
         
         
 ## Software installation details of set_up_whole_system.sh. It will install:
 ### Requirements
 
-* OpenCV 3.0 and opencv_contrib
-
-* Install userland-master in [/home/pi/userland-master] 
+* Download and install OpenCV 3.0 and opencv_contrib
+* Download and install userland-master in [/home/pi/userland-master] 
 (https://github.com/raspberrypi/userland)
-
-* Set GPU memory 256MB
-
-* Install 
+* Set GPU memory at 256MB
+* Temporarily increase the swap
+* Install libncurses5-dev libncursesw5-dev
+* Install git
+* Enable SSH
+* Enable camera
+* Disable camera led
+* Download and install c-elegans_smartLight program
 
 ### Installation
 
@@ -64,10 +68,10 @@ the camera-display correspondences.
 
 
 ### Run code
-
-> cd c-elegans_smartLight
-> sudo ./c-elegans
-
+````
+cd c-elegans_smartLight '\n'
+sudo ./c-elegans
+````
 
 ## Notes
 
