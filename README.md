@@ -12,7 +12,7 @@ Components:
 * 7" Raspberry Pi Display
 * Raspberry power supply (at least 2Amp)
 * Micro SD card (at least 16GB)
-* Assemble them as indicated in document ....
+* Assemble them as indicated in document https://github.com/JCPuchalt/c-elegans_smartLight/blob/master/S2_Appendix.pdf
 
 The camera should be coplanar to the display focusing at the center of it at a distance of about 8cm.
 The camera and the display must be firmly grasped, since any minimum displacement will decalibrate 
