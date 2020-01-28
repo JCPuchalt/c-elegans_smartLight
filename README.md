@@ -4,6 +4,8 @@ This code is developed for assessing:
 control technique for Caenorhabditis elegans cultured on standard Petri plates" PLOS ONE
 Copyright (c) 2018 UPV and Biopolis. A.Sánchez, J.Puchalt, P.Martorell and S.Genovés
 
+### Research article
+Puchalt JC, Sánchez-Salmerón AJ, Martorell Guerola P, Genovés Martínez S (2019) Active backlight for automating visual monitoring: An analysis of a lighting control technique for Caenorhabditis elegans cultured on standard Petri plates. PLOS ONE 14(4): e0215548. https://doi.org/10.1371/journal.pone.0215548
 
 ### Hardware description on [1]
 Components:
